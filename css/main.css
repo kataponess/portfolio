@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* -------------------- */
+/* ----- fade-in-up ----- */
+/* -------------------- */
+.fade-in-up {
+  opacity: 0;
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+/* -------------------- */
+/* ----- 全体設定 ----- */
+/* -------------------- */
+* {
+  font-family: "Oswald", sans-serif, "Noto Sans JP", sans-serif, "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+  font-weight: 500;
+  text-shadow: 0.5px 0.5px 1px #000000;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fafafa;
+  font-size: 1.6em;
+}
+
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.emergency {
+  width: 80%;
+  margin: 20px auto;
+  border: 5px dotted black;
+}
+
+@media (max-width: 768px) {
+  .emergency {
+    width: 85%;
+  }
+}
+
+.emergency-txt {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+@media (max-width: 992px) {
+  .emergency-txt {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .emergency-txt {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

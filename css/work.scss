@@ -1,0 +1,355 @@
+// ----- カラー -----
+$base_color: #fafafa;
+$main_color: #111111;
+$works_color: #e2d01a;
+
+// ----- メディアクエリ -----
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+@mixin mq($break-point) {
+  @media (max-width: $break-point) {
+    @content;
+  }
+}
+
+/* -------------------- */
+/* ----- works ----- */
+/* -------------------- */
+.works {
+  position: relative;
+  margin-bottom: 100px;
+  @include mq($sm) {
+    margin-bottom: 50px;
+  }
+  &:after {
+    position: absolute;
+    width: 95%;
+    height: 3px;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: $main_color;
+    content: "";
+    z-index: 10;
+    @include mq($sm) {
+      bottom: -50px;
+    }
+  }
+
+  &-ttl {
+    margin-left: 30px;
+    @include mq($lg) {
+      margin-left: 0;
+    }
+    h2 {
+      margin: 0;
+      color: $works_color;
+      text-decoration: none;
+      font-size: 200px;
+      text-shadow: 10px 10px 0 #000;
+      @include mq($lg) {
+        font-size: 150px;
+      }
+      @include mq($sm) {
+        font-size: 100px;
+        text-shadow: 5px 5px 0 #000;
+      }
+      span {
+        position: relative;
+        width: 400px;
+        top: -100px;
+        left: 0;
+        font-size: 80px;
+        text-shadow: 3px 3px 0 #000;
+        @include mq($lg) {
+          top: -73px;
+          font-size: 60px;
+        }
+        @include mq($sm) {
+          top: -50px;
+          text-shadow: 2px 2px 0 #000;
+          font-size: 40px;
+        }
+        &:after {
+          position: absolute;
+          width: 69vw;
+          height: 3.5px;
+          bottom: 0;
+          left: 0;
+          background: $main_color;
+          content: "";
+          z-index: 10;
+          @include mq($lg) {
+            width: 74vw;
+          }
+          @include mq($md) {
+            width: 66vw;
+          }
+          @include mq($sm) {
+            width: 61vw;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    .work-outer {
+      margin: 0 auto 80px;
+      padding: 10px;
+      width: 80%;
+      border: 2px solid black;
+      box-shadow: 50px 30px 0 black;
+      @include mq($xl) {
+        width: 85%;
+        box-shadow: 30px 15px 0 black;
+      }
+      @include mq($md) {
+        box-shadow: 20px 10px 0 black;
+      }
+      @include mq($sm) {
+        margin: 0 auto 40px;
+        box-shadow: 10px 5px 0 black;
+      }
+      .work-ttl {
+        position: relative;
+        margin: 20px 0 30px;
+        font-size: 30px;
+        @include mq($sm) {
+          font-size: 25px;
+        }
+        &:after {
+          position: absolute;
+          width: 500px;
+          height: 3px;
+          bottom: 0;
+          left: -100px;
+          margin: auto;
+          background: $main_color;
+          content: "";
+          z-index: -10;
+          @include mq($xl) {
+            left: -50px;
+          }
+          @include mq($md) {
+            width: 400px;
+            left: -40px;
+          }
+          @include mq($sm) {
+            width: 250px;
+            left: -25px;
+          }
+        }
+      }
+      .top {
+        display: flex;
+        @include mq($md) {
+          flex-direction: column;
+          align-items: center;
+        }
+        img {
+          width: 300px;
+          margin: 5px;
+          border: 1px solid #000;
+          @include mq($sm) {
+            width: 95%;
+          }
+        }
+        &-txt {
+          p {
+            margin: 0 16px;
+            font-size: 25px;
+            @include mq($md) {
+              font-size: 20px;
+              margin: 0 10px;
+            }
+            @include mq($sm) {
+              font-size: 18px;
+            }
+          }
+          .top-mark {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            .fa-desktop,
+            .fa-github-square {
+              width: 50%;
+              font-size: 40px;
+            }
+            a {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+      .topWeb {
+        .top-img {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          p {
+            width: 30%;
+            @include mq($md) {
+              width: 45%;
+            }
+            @include mq($sm) {
+              width: 95%;
+            }
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:nth-of-type(4),
+            &:nth-of-type(6) {
+              @include mq($sm) {
+                display: none;
+              }
+            }
+            img {
+              width: 100%;
+              border: 1px solid #000;
+            }
+          }
+        }
+        .top-mark {
+          display: flex;
+          justify-content: space-around;
+          text-align: center;
+          .fa-desktop,
+          .fa-github-square {
+            width: 50%;
+            font-size: 40px;
+          }
+          a {
+            font-size: 30px;
+          }
+        }
+      }
+      .language {
+        display: flex;
+        @include mq($sm) {
+          flex-direction: column;
+        }
+        &-txt {
+          margin: 5px 0;
+          font-size: 25px;
+          @include mq($md) {
+            font-size: 20px;
+          }
+          @include mq($sm) {
+            font-size: 18px;
+          }
+          &:nth-of-type(odd) {
+            width: 10%;
+            @include mq($lg) {
+              width: 12%;
+            }
+            @include mq($md) {
+              width: 13%;
+            }
+            @include mq($sm) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(even) {
+            width: 90%;
+            @include mq($lg) {
+              width: 88%;
+            }
+            @include mq($md) {
+              width: 87%;
+            }
+            @include mq($sm) {
+              width: 90%;
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+      .environment {
+        display: flex;
+        @include mq($sm) {
+          flex-direction: column;
+        }
+        &-txt {
+          margin: 5px 0;
+          font-size: 25px;
+          @include mq($md) {
+            font-size: 20px;
+          }
+          @include mq($sm) {
+            font-size: 18px;
+          }
+          &:nth-of-type(odd) {
+            width: 10%;
+            @include mq($lg) {
+              width: 12%;
+            }
+            @include mq($md) {
+              width: 13%;
+            }
+            @include mq($sm) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(even) {
+            width: 90%;
+            @include mq($lg) {
+              width: 88%;
+            }
+            @include mq($md) {
+              width: 87%;
+            }
+            @include mq($sm) {
+              width: 90%;
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+      .keyword {
+        display: flex;
+        @include mq($sm) {
+          flex-direction: column;
+        }
+        &-txt {
+          margin: 5px 0;
+          font-size: 25px;
+          @include mq($md) {
+            font-size: 20px;
+          }
+          @include mq($sm) {
+            font-size: 18px;
+          }
+          &:nth-of-type(odd) {
+            width: 18%;
+            @include mq($lg) {
+              width: 23%;
+            }
+            @include mq($md) {
+              width: 26%;
+            }
+            @include mq($sm) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(even) {
+            width: 82%;
+            @include mq($lg) {
+              width: 77%;
+            }
+            @include mq($md) {
+              width: 74%;
+            }
+            @include mq($sm) {
+              width: 90%;
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

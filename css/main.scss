@@ -1,0 +1,96 @@
+// 画像、図、写真	img
+// サムネイル	thumb
+// バナー	bn
+// ボタン	btn
+// ロゴ	logo
+// ナビ	nav
+// 見出し	ttl
+// テキスト	txt
+// アイコン	icon
+// （アイコン以外の）背景	bg
+// 矢印	arrow
+// 線	line
+// ページトップ pagetop
+// スペーサー spacer
+// ロード中 loading
+
+// ----- カラー -----
+$base_color: #fafafa;
+$main_color: #111111;
+
+// ----- メディアクエリ -----
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+@mixin mq($break-point) {
+  @media (max-width: $break-point) {
+    @content;
+  }
+}
+
+/* -------------------- */
+/* ----- fade-in-up ----- */
+/* -------------------- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 2s;
+}
+
+/* -------------------- */
+/* ----- 全体設定 ----- */
+/* -------------------- */
+* {
+  font-family: "Oswald", sans-serif, "Noto Sans JP", sans-serif, "Avenir", "Helvetica Neue", "Helvetica", "Arial",
+    "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+  font-weight: 500;
+  text-shadow: 0.5px 0.5px 1px #000000;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: $base_color;
+  font-size: 1.6em;
+}
+
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.emergency {
+  width: 80%;
+  margin: 20px auto;
+  border: 5px dotted black;
+  @include mq($md) {
+    width: 85%;
+  }
+  &-txt {
+    font-size: 40px;
+    margin: 10px 0;
+    @include mq($lg) {
+      font-size: 20px;
+    }
+    @include mq($md) {
+      font-size: 18px;
+    }
+  }
+}

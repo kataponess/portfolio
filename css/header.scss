@@ -1,0 +1,351 @@
+// ----- カラー -----
+$base_color: #fafafa;
+$main_color: #111111;
+
+// ----- メディアクエリ -----
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+@mixin mq($break-point) {
+  @media (max-width: $break-point) {
+    @content;
+  }
+}
+
+/* -------------------- */
+/* ----- spNav ----- */
+/* -------------------- */
+.spHeader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  @include mq($lg) {
+    display: block;
+  }
+  &-logo {
+    width: 320px;
+    margin: 0 auto;
+    @include mq($lg) {
+      width: 200px;
+    }
+    @include mq($sm) {
+      width: 150px;
+    }
+    img {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  .spNav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    @include mq($lg) {
+      height: 30px;
+    }
+    @include mq($sm) {
+      justify-content: flex-start;
+    }
+    &::-webkit-scrollbar {
+      height: 2px;
+      &-track {
+        margin: 0 2px;
+        background: #ccc;
+        border-radius: 5px;
+      }
+      &-thumb {
+        background: #d49fc2;
+        border-radius: 5px;
+      }
+    }
+    &-items {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      @include mq($lg) {
+        margin: 0;
+      }
+      & li {
+        text-align: center;
+        border-left: 1px solid #fff;
+        &:last-child {
+          border-right: 1px solid #fff;
+        }
+        & a,
+        & a:link,
+        & a:visited {
+          display: inline-block;
+          width: 96px;
+          height: 40px;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .fa-angle-left {
+    display: none;
+    @include mq($sm) {
+      display: block;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+  .fa-angle-right {
+    display: none;
+    @include mq($sm) {
+      display: block;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+}
+
+/* -------------------- */
+/* ----- header ----- */
+/* -------------------- */
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../imgs/dai.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color: #fff;
+  &-in {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    @include mq($lg) {
+      display: none;
+    }
+    .header-logo {
+      width: 250px;
+      margin: 10px 0 0 30px;
+      img {
+        width: 100%;
+      }
+    }
+    .globalNav {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 20px;
+      &-nav00,
+      &-nav01,
+      &-nav02,
+      &-nav03,
+      &-nav04 {
+        position: relative;
+        width: 160px;
+        text-decoration: none;
+        font-size: 40px;
+        @include mq($xl) {
+          width: 135px;
+          font-size: 35px;
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          width: 60%;
+          height: 3px;
+          top: 35px;
+          left: 50px;
+          background: $base_color;
+          transition: 0.5s;
+          @include mq($xl) {
+            width: 62%;
+            top: 30px;
+            left: 44px;
+          }
+        }
+        &:hover:after {
+          top: calc(100% - 10px);
+        }
+        a {
+          display: inline-block;
+          width: 100%;
+          color: #fff;
+        }
+        span {
+          position: absolute;
+          top: 8px;
+          font-size: 20px;
+          @include mq($xl) {
+            top: 6px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .header-txt {
+    display: inline-block;
+    position: absolute;
+    top: 25vh;
+    left: 50px;
+    width: 80%;
+    @include mq($lg) {
+      top: 35vh;
+    }
+    @include mq($sm) {
+      top: 38vh;
+      left: 30px;
+    }
+    .txt01 {
+      display: inline-block;
+      font-size: 70px;
+      @include mq($xl) {
+        font-size: 50px;
+      }
+      @include mq($lg) {
+        font-size: 40px;
+      }
+      @include mq($md) {
+        font-size: 30px;
+      }
+      @include mq($sm) {
+        font-size: 25px;
+      }
+      &:after {
+        position: absolute;
+        width: 150%;
+        height: 3px;
+        bottom: 15px;
+        left: 0;
+        background: $base_color;
+        content: "";
+        z-index: 10;
+        @include mq($xl) {
+          bottom: 10px;
+        }
+        @include mq($md) {
+          bottom: 5px;
+        }
+        @include mq($sm) {
+          width: 120%;
+        }
+      }
+    }
+    .txt02 {
+      display: inline-block;
+      position: absolute;
+      top: 100px;
+      left: 200px;
+      font-size: 70px;
+      @include mq($xl) {
+        font-size: 50px;
+      }
+      @include mq($lg) {
+        font-size: 40px;
+        top: 70px;
+        left: 100px;
+      }
+      @include mq($md) {
+        font-size: 30px;
+      }
+      @include mq($sm) {
+        top: 50px;
+        font-size: 25px;
+      }
+      &:after {
+        position: absolute;
+        width: 180%;
+        height: 3px;
+        bottom: 15px;
+        left: 0;
+        background: $base_color;
+        content: "";
+        z-index: 10;
+        @include mq($xl) {
+          bottom: 10px;
+        }
+        @include mq($xl) {
+          bottom: 5px;
+        }
+        @include mq($sm) {
+          width: 130%;
+        }
+      }
+    }
+  }
+
+  .scroll-txt {
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    @include mq($md) {
+      font-size: 20px;
+    }
+    &:before {
+      position: absolute;
+      width: 2px;
+      height: 100px;
+      top: -100px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: #fff;
+      content: "";
+      @include mq($md) {
+        height: 70px;
+        top: -70px;
+      }
+    }
+    &:after {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: #fff;
+      content: "";
+      animation: scrollAnimation 3s 1s infinite;
+      @keyframes scrollAnimation {
+        0% {
+          top: -100px;
+        }
+        100% {
+          top: -5px;
+        }
+      }
+      @include mq($md) {
+        animation: scrollAnimation-md 3s 1s infinite;
+        @keyframes scrollAnimation-md {
+          0% {
+            top: -70px;
+          }
+          100% {
+            top: -5px;
+          }
+        }
+      }
+    }
+  }
+}
