@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width , initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans+JP&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/1.0.1/dist/aos.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <script src="https://kit.fontawesome.com/bee5b26be3.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/skill.css">
-  <link rel="stylesheet" href="css/work.css">
-  <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/header.min.css">
+  <link rel="stylesheet" href="css/skill.min.css">
+  <link rel="stylesheet" href="css/work.min.css">
+  <link rel="stylesheet" href="css/about.min.css">
+  <link rel="stylesheet" href="css/contact.min.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="shortcut icon" href="imgs/favicon.ico">
   <title>インコ好きエンジニアのPortfolio</title>
 </head>
 <body>
@@ -42,11 +42,11 @@
     <header class="header" id="home">
 
       <div class="header-in">
-        <div class="header-logo fade-in-up">
+        <div class="header-logo">
           <img src="imgs/logo_white.png" alt="">
         </div>
 
-        <nav class="globalNav fade-in-up">
+        <nav class="globalNav">
           <div class="globalNav-nav00">
             <a href="#home">00.<span>HOME</span></a>
           </div>
@@ -77,32 +77,32 @@
       </div>
 
       <section class="skill" id="skills">
-        <div class="skill-ttl fade-in-up">
+        <div class="skill-ttl">
           <h2>01.<span>SKILLs</span></h2>
         </div>
 
         <div class="skill-body">
-          <div class="sentence-outer fade-in-up">
+          <div class="sentence-outer">
             <p class="sentence-ttl">◆言語◆</p>
             <p class="sentence-txt">HTML5 , CSS3 , SASS(SCSS) , JavaScript , PHP</p>
           </div>
 
-          <div class="sentence-outer fade-in-up">
+          <div class="sentence-outer">
             <p class="sentence-ttl">◆フレームワーク等◆</p>
             <p class="sentence-txt">Bootstrap , jQuery , Laravel</p>
           </div>
 
-          <div class="sentence-outer fade-in-up">
+          <div class="sentence-outer">
             <p class="sentence-ttl">◆環境等◆</p>
             <p class="sentence-txt">Wordpress , Xampp , MySQL , MariaDB , Apache , Visual Studio Code , Eclipse , Windows10 , Smartphone , Git , TortoiseGit , GitHub , FTP , FFFTP , TeraTerm</p>
           </div>
 
-          <div class="sentence-outer fade-in-up">
+          <div class="sentence-outer">
             <p class="sentence-ttl">◆その他キーワード◆</p>
             <p class="sentence-txt">BEM , Composer , npm , gulp , ejs , Node.js , SEO , Responsive-Design</p>
           </div>
 
-          <div class="sentence-outer fade-in-up">
+          <div class="sentence-outer">
             <p class="sentence-ttl">◆まとめ◆</p>
             <p class="sentence-txt">WEBサイト制作メンバーとして、コーディングを担当していました。主な言語はHTML、CSS(SCSS)、JavaScriptです。</p>
             <p class="sentence-txt">WEB系エンジニアになりたいと思ってますので、会社の研修と自己学習でPHP(Laravel)を勉強しています。</p>
@@ -111,12 +111,12 @@
       </section>
 
       <section class="works" id="works">
-        <div class="works-ttl fade-in-up">
+        <div class="works-ttl">
           <h2>02.<span>WORKs</span></h2>
         </div>
 
         <div class="works-body">
-          <div class="work-outer fade-in-up">
+          <div class="work-outer">
             <p class="work-ttl">★TORIBIRD★</p>
             <div class="top">
               <a href="http://kataponess.xsrv.jp"><img src="imgs/toribird.png" alt=""></a>
@@ -124,7 +124,7 @@
                 <p>PHPのフレームワークLaravelを使って構築したサイト。全国の動物園に居るインコ・オウムの情報を、スクレイピングを使ってデータベースに格納。</p>
                 <div class="top-mark">
                   <p><a href="http://kataponess.xsrv.jp/"><i class="fas fa-desktop"></i>Adress</a></p>
-                  <!-- <a><a href="https://github.com/Masahiro-Katayama/toribird"><i class="fab fa-github-square"></i>GitHub</a></p> -->
+                  <p><a href="https://github.com/Kataponess/toribird"><i class="fab fa-github-square"></i>GitHub</a></p>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@
             </div>
           </div>
 
-          <div class="work-outer fade-in-up">
+          <div class="work-outer">
             <p class="work-ttl">★PORTFOLIOサイト★</p>
             <div class="top">
               <a href=""><img src="imgs/portfolio.png" alt=""></a>
@@ -150,7 +150,7 @@
                 <p>このページ。レスポンシブ対応デザインの縦長1ページのサイト。ヒーローイメージはペットのズグロシロハラインコの「ダイちゃん」。</p>
                 <div class="top-mark">
                   <p><a href="http://kataponess.xsrv.jp/"><i class="fas fa-desktop"></i>Adress</a></p>
-                  <!-- <p><a href="https://github.com/Masahiro-Katayama/toribird"><i class="fab fa-github-square"></i>GitHub</a></p> -->
+                  <p><a href="https://github.com/Kataponess/toribird"><i class="fab fa-github-square"></i>GitHub</a></p>
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@
             </div>
           </div>
 
-          <div class="work-outer fade-in-up">
+          <div class="work-outer">
             <p class="work-ttl">★WEBサイト例★</p>
             <div class="topWeb">
               <div class="top-img">
@@ -180,7 +180,7 @@
                 <p><img src="imgs/page6.png" alt=""></p>
               </div>
               <div class="top-mark">
-                <!-- <p><a href="https://github.com/Masahiro-Katayama/portfolio"><i class="fab fa-github-square"></i>GitHub</a></p> -->
+                <p><a href="https://github.com/Kataponess/portfolio"><i class="fab fa-github-square"></i>GitHub</a></p>
               </div>
             </div>
             <div class="language">
@@ -197,7 +197,7 @@
             </div>
           </div>
 
-          <div class="work-outer fade-in-up">
+          <div class="work-outer">
             <p class="work-ttl">★問い合わせフォーム作成★</p>
             <div class="top">
               <a href="http://kataponess.com/contactform_php/"><img src="imgs/contactform.png" alt=""></a>
@@ -205,7 +205,7 @@
                 <p>お問い合わせフォームを作成。バリデーションも実装。</p>
                 <div class="top-mark">
                   <p><a href="http://kataponess.com/contactform_php/"><i class="fas fa-desktop"></i>Adress</a></p>
-                  <!-- <a><a href="https://github.com/Masahiro-Katayama/contactform_php"><i class="fab fa-github-square"></i>GitHub</a></p> -->
+                  <p><a href="https://github.com/Kataponess/contactform_php"><i class="fab fa-github-square"></i>GitHub</a></p>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@
             </div>
           </div>
 
-          <div class="work-outer fade-in-up">
+          <div class="work-outer">
             <p class="work-ttl">★オセロ★</p>
             <div class="top">
               <a href="http://kataponess.com/othello/"><img src="imgs/othello.png" alt=""></a>
@@ -231,29 +231,7 @@
                 <p>イージーモードボタンで、駒をおける場所を光らせる機能を実装。</p>
                 <div class="top-mark">
                   <p><a href="http://kataponess.com/othello"><i class="fas fa-desktop"></i>Adress</a></p>
-                  <!-- <p><a href="https://github.com/Masahiro-Katayama/othello"><i class="fab fa-github-square"></i>GitHub</a></p> -->
-                </div>
-              </div>
-            </div>
-            <div class="language">
-              <p class="language-txt">言語：</p>
-              <p class="language-txt">HTML , CSS,　JavaScript</p>
-            </div>
-            <div class="environment">
-              <p class="environment-txt">環境：</p>
-              <p class="environment-txt">Visual Studio Code , Windows10 , Git , GitHub , FTP</p>
-            </div>
-          </div>
-
-          <div class="work-outer fade-in-up">
-            <p class="work-ttl">★電卓★</p>
-            <div class="top">
-              <a href="http://kataponess.com/calc2/"><img src="imgs/calc2.png" alt=""></a>
-              <div class="top-txt">
-                <p>赤い電卓が2個目に作成した物で、素のJavaScriptを使用。</p>
-                <div class="top-mark">
-                  <p><a href="http://kataponess.com/calc2/"><i class="fas fa-desktop"></i>Adress</a></p>
-                  <!-- <p><a href="https://github.com/Masahiro-Katayama/calc_jq"><i class="fab fa-github-square"></i>GitHub</a></p> -->
+                  <p><a href="https://github.com/Kataponess/othello"><i class="fab fa-github-square"></i>GitHub</a></p>
                 </div>
               </div>
             </div>
@@ -267,15 +245,15 @@
             </div>
           </div>
 
-          <div class="work-outer fade-in-up">
+          <div class="work-outer">
             <p class="work-ttl">★電卓★</p>
             <div class="top">
-              <a href="http://kataponess.com/calc1/"><img src="imgs/calc1.png" alt=""></a>
+              <a href="http://kataponess.com/calc2/"><img src="imgs/calc2.png" alt=""></a>
               <div class="top-txt">
-                <p>青い方が1個目に作った物でjQueryを使用。デジタル時計も同時に実装。</p>
+                <p>jQueryを使用して電卓作成</p>
                 <div class="top-mark">
-                  <p><a href="http://kataponess.com/calc1/"><i class="fas fa-desktop"></i>Adress</a></p>
-                  <!-- <p><a href="https://github.com/Masahiro-Katayama/calc_js"><i class="fab fa-github-square"></i>GitHub</a></p> -->
+                  <p><a href="http://kataponess.com/calc2/"><i class="fas fa-desktop"></i>Adress</a></p>
+                  <p><a href="https://github.com/Kataponess/calc"><i class="fab fa-github-square"></i>GitHub</a></p>
                 </div>
               </div>
             </div>
@@ -293,11 +271,11 @@
       </section>
 
       <section class="about" id="about">
-        <div class="about-ttl fade-in-up">
+        <div class="about-ttl">
           <h2 class="">03.<span>ABOUT me</span></h2>
         </div>
 
-        <div class="profile-outer fade-in-up">
+        <div class="profile-outer">
           <div class="profile-list">
             under construction
             <!-- <p class="">名前 --- <br>片山　雅裕</p>
@@ -311,15 +289,15 @@
       </section>
 
       <section class="contact" id="contact">
-        <div class="contact-ttl fade-in-up">
+        <div class="contact-ttl">
           <h2 class="">04.<span>CONTACT me</span></h2>
         </div>
 
         <div class="contact-body">
-          <div class="sentence-outer fade-in-up">
+          <div class="sentence-outer">
             under construction
             <!-- <p class="sentence-ttl">
-              <a href="https://github.com/Masahiro-Katayama"><i class="fab fa-github-square"></i>GitHub</a>
+              <a href="https://github.com/kataponess"><i class="fab fa-github-square"></i>GitHub</a>
             </p>
             <p class="sentence-ttl">
               <a href="https://twitter.com/kataponess69"><i class="fab fa-twitter-square"></i>twitter</a>

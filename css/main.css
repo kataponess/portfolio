@@ -1,16 +1,5 @@
 @charset "UTF-8";
 /* -------------------- */
-/* ----- fade-in-up ----- */
-/* -------------------- */
-.fade-in-up {
-  opacity: 0;
-  -webkit-transform: translateY(70px);
-          transform: translateY(70px);
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-/* -------------------- */
 /* ----- 全体設定 ----- */
 /* -------------------- */
 * {
